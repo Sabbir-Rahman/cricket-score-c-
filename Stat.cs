@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CricketScore
 {
-    internal class Stat
+    class Stat
     {
+        private int run, ball, wicket;
+        public int Run { get { return run; } set { run = value; } }
+
+        private int Ball { get { return ball; } set { ball = value; } }
+        public int Wicket { get { return wicket; } set { wicket = value; } }
+
     }
 }

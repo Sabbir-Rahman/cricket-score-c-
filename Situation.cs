@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace CricketScore
 {
-    internal class Situation
+    class Situation
     {
+        Stat stat = new Stat();
+        public void increaseRun(int run)
+        {
+            stat.Run += run;
+        }
+
+        public void increaseBall(int ball)
+        {
+            stat.Ball += 1;
+        }
+
+        public void increaseWicket()
+        {
+            stat.Wicket += 1;
+        }
     }
 }
