@@ -11,17 +11,28 @@ namespace CricketScore
         Score score = new Score();
         public void increaseRun(int run)
         {
-            stat.Run += run;
+            score.Run += run;
+            increaseBall();
         }
 
-        public void increaseBall(int ball)
+        public void increaseBall()
         {
-            stat.Ball += 1;
+            score.Ball += 1;
         }
 
         public void increaseWicket()
         {
-            stat.Wicket += 1;
+            score.Wicket += 1;
+        }
+
+        public void wide()
+        {
+            score.Run += 1;
+        }
+
+        public void noBall(int run)
+        {
+            score.Run += run;
         }
     }
 }
