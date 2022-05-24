@@ -8,7 +8,7 @@ namespace CricketScore
 {
     class Situation
     {
-        Stat stat = new Stat();
+        Score score = new Score();
         public void increaseRun(int run)
         {
             stat.Run += run;
