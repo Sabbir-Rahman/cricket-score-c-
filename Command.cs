@@ -63,10 +63,12 @@ namespace CricketScore
             Console.WriteLine("It's a wide");
         }
 
-        public void noBall(int run)
+        public void noBall(int noBallRun)
         {
-            situation.increaseRun(run + 1, Situation.WideNo.wide);
-            Console.WriteLine("It's a wide");
+            situation.increaseRun(noBallRun + 1, Situation.WideNo.no);
+            Console.WriteLine("Enter the free hit run");
+            int freeHitRun = Convert.ToInt32(Console.ReadLine());
+            situation.increaseRun(freeHitRun);
         }
     }
 }
