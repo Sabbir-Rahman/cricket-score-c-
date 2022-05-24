@@ -1,0 +1,15 @@
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\bin\Debug\net6.0\CricketScore.exe
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\bin\Debug\net6.0\CricketScore.deps.json
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\bin\Debug\net6.0\CricketScore.runtimeconfig.json
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\bin\Debug\net6.0\CricketScore.dll
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\bin\Debug\net6.0\CricketScore.pdb
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.csproj.AssemblyReference.cache
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.AssemblyInfoInputs.cache
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.AssemblyInfo.cs
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.csproj.CoreCompileInputs.cache
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.dll
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\refint\CricketScore.dll
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.pdb
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\CricketScore.genruntimeconfig.cache
+C:\Users\sabbi\source\repos\CricketScore\CricketScore\obj\Debug\net6.0\ref\CricketScore.dll
