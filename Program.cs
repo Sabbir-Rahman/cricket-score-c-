@@ -19,6 +19,8 @@ namespace CricketScore
 
             //initialize the class
             Command command = new Command();
+
+            Console.WriteLine("Enter the command 0-6 for run, 7 for wicket, 8 for wide, 9 for no ball");
            
             while (ballsRemain> 0)
             {
