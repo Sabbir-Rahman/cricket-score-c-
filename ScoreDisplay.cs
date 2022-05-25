@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CricketScore
 {
-    internal class ScoreDisplay
+    class ScoreDisplay
     {
     }
 }

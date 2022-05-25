@@ -12,6 +12,7 @@ namespace CricketScore
         
         public void dotBall()
         {
+            situation.increaseRun(0);
             Console.WriteLine("Dot ball");
         }
 

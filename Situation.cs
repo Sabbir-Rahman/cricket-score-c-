@@ -8,11 +8,19 @@ namespace CricketScore
 {
     class Situation
     {
+        public enum WideNo { wide, no }
         Score score = new Score();
         public void increaseRun(int run)
         {
             score.Run += run;
             increaseBall();
+            score.scoreDisplay();
+        }
+
+        public void increaseRun(int run, WideNo isWideOrNo)
+        {
+            score.Run += run;
+            score.scoreDisplay();
         }
 
         public void increaseBall()
@@ -23,16 +31,9 @@ namespace CricketScore
         public void increaseWicket()
         {
             score.Wicket += 1;
+            increaseBall();
+            score.scoreDisplay();
         }
 
-        public void wide()
-        {
-            score.Run += 1;
-        }
-
-        public void noBall(int run)
-        {
-            score.Run += run;
-        }
     }
 }
