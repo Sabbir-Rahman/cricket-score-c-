@@ -14,7 +14,7 @@ namespace CricketScore
             increaseBall();
         }
 
-        public void increaseRun(int run,ScoreEnum.WideNo isWideOrNo)
+        public void increaseRun(int run,ScoreEnum.Situation isWideOrNo)
         {
             Score.Run += run;
         }

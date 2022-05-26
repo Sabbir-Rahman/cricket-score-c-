@@ -12,84 +12,46 @@ namespace CricketScore
         Commentery commentery = new Commentery();
         ScoreDisplay scoreDisplay = new ScoreDisplay();
         
-        public void dotBall()
+        public void calculateRun(int run,ScoreEnum.Situation situationEnum )
         {
-            situation.increaseRun(0);
-            Console.WriteLine(commentery.loadCommentery(0));
-            scoreDisplay.scoreDisplay();
-        }
+            if (situationEnum == ScoreEnum.Situation.run)
+            {
+                situation.increaseRun(run);
+                Console.WriteLine(commentery.loadCommentery(run));
+                scoreDisplay.scoreDisplay();
 
-        public void single()
-        {
-            situation.increaseRun(1);
-            Console.WriteLine(commentery.loadCommentery(1));
-            scoreDisplay.scoreDisplay();
-        }
+            } else if (situationEnum == ScoreEnum.Situation.wide)
+            {
+                situation.increaseRun(1, ScoreEnum.Situation.wide);
+                Console.WriteLine(commentery.loadCommentery(8));
+                scoreDisplay.scoreDisplay();
 
-        public void twoRun()
-        {
-            situation.increaseRun(2);
-            Console.WriteLine(commentery.loadCommentery(2));
-            scoreDisplay.scoreDisplay();
-        }
+            } else if (situationEnum == ScoreEnum.Situation.no)
+            {
+                Console.WriteLine("It's a no ball, Enter the no ball run and next ball is free hit");
+                int noBallRun = Convert.ToInt32(Console.ReadLine());
 
-        public void threeRun()
-        {
-            situation.increaseRun(3);
-            Console.WriteLine(commentery.loadCommentery(3));
-            scoreDisplay.scoreDisplay();
-        }
+                situation.increaseRun(noBallRun + 1, ScoreEnum.Situation.no);
+                Console.WriteLine(commentery.loadCommentery(noBallRun));
+                scoreDisplay.scoreDisplay();
 
-        public void fourRun()
-        {
-            situation.increaseRun(4);
-            Console.WriteLine(commentery.loadCommentery(4));
-            scoreDisplay.scoreDisplay();
-        }
+                Console.WriteLine(commentery.loadCommentery(9));
+                int freeHitRun = Convert.ToInt32(Console.ReadLine());
 
-        public void fiveRun()
-        {
-            situation.increaseRun(5);
-            Console.WriteLine(commentery.loadCommentery(5));
-            scoreDisplay.scoreDisplay();
-        }
+                Console.WriteLine(commentery.loadCommentery(freeHitRun));
+                situation.increaseRun(freeHitRun);
+                scoreDisplay.scoreDisplay();
 
-        public void sixRun()
-        {
-            situation.increaseRun(6);
-            Console.WriteLine(commentery.loadCommentery(6));
-            scoreDisplay.scoreDisplay();
-        }
+            } else if (situationEnum == ScoreEnum.Situation.wicket)
+            {
+                situation.increaseWicket();
+                Console.WriteLine(commentery.loadCommentery(7));
+                scoreDisplay.scoreDisplay();
 
-        public void wicket()
-        {
-            situation.increaseWicket();
-            Console.WriteLine(commentery.loadCommentery(7));
-            scoreDisplay.scoreDisplay();
-        }
-
-        public void wide()
-        {
-            situation.increaseRun(1, ScoreEnum.WideNo.wide);
-            Console.WriteLine(commentery.loadCommentery(8));
-            scoreDisplay.scoreDisplay();
-        }
-
-        public void noBall()
-        {
-            Console.WriteLine("It's a no ball, Enter the no ball run and next ball is free hit");
-            int noBallRun = Convert.ToInt32(Console.ReadLine());
-            
-            situation.increaseRun(noBallRun + 1, ScoreEnum.WideNo.no);
-            Console.WriteLine(commentery.loadCommentery(noBallRun));
-            scoreDisplay.scoreDisplay();
-            
-            Console.WriteLine(commentery.loadCommentery(9));
-            int freeHitRun = Convert.ToInt32(Console.ReadLine());
-            
-            Console.WriteLine(commentery.loadCommentery(freeHitRun));
-            situation.increaseRun(freeHitRun);
-            scoreDisplay.scoreDisplay();
+            } else
+            {
+                Console.WriteLine("Something wrong");
+            }
         }
     }
 }

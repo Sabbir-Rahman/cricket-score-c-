@@ -13,7 +13,7 @@ namespace CricketScore
             Score.BallsRemain = (int)Score.TotalOvers * 6;
             int commandStatus;
             //initialize the class
-            ScoreCalculate command = new ScoreCalculate();
+            ScoreCalculate scoreCalculate = new ScoreCalculate();
 
             Console.WriteLine("Enter the command 0-6 for run, 7 for wicket, 8 for wide, 9 for no ball");
            
@@ -23,37 +23,37 @@ namespace CricketScore
                 switch (commandStatus)
                 {
                     case 0:
-                        command.dotBall();
+                        scoreCalculate.calculateRun(0, ScoreEnum.Situation.run);
                         break;
                     case 1:
-                        command.single();
+                        scoreCalculate.calculateRun(1, ScoreEnum.Situation.run);
                         break;
                     case 2:
-                        command.twoRun();
+                        scoreCalculate.calculateRun(3, ScoreEnum.Situation.run);
                         break;
                     case 3:
-                        command.threeRun();
+                        scoreCalculate.calculateRun(4, ScoreEnum.Situation.run);
                         break;
                     case 4:
-                        command.fourRun();
+                        scoreCalculate.calculateRun(4, ScoreEnum.Situation.run);
                         break;
                     case 5:
-                        command.fiveRun();
+                        scoreCalculate.calculateRun(5, ScoreEnum.Situation.run);
                         break;
                     case 6:
-                        command.sixRun();
+                        scoreCalculate.calculateRun(6, ScoreEnum.Situation.run);
                         break;
                     // wicket
                     case 7:
-                        command.wicket();
+                        scoreCalculate.calculateRun(7, ScoreEnum.Situation.wicket);
                         break;
                     //wide
                     case 8:
-                        command.wide();
+                        scoreCalculate.calculateRun(8, ScoreEnum.Situation.wide);
                         break;
                     // no ball
-                    case 9:          
-                        command.noBall();
+                    case 9:
+                        scoreCalculate.calculateRun(9, ScoreEnum.Situation.no);
                         break;
                     default:
                         break;

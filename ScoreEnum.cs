@@ -8,6 +8,12 @@ namespace CricketScore
 {
     public class ScoreEnum
     {
-        public enum WideNo { wide, no }
+        public enum Situation
+        {
+            wicket,
+            wide,
+            no,
+            run
+        }
     }
 }
