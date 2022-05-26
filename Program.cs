@@ -7,22 +7,17 @@ namespace CricketScore
 
         static void Main(string[] args)
         {
-
-            int totalBalls, commandStatus, noBallRun, ballsRemain;
-            float totalOvers;
-            
             Console.WriteLine("Enter the number of overs game");
-            totalOvers = Convert.ToInt32(Console.ReadLine());
+            Score.TotalOvers = Convert.ToInt32(Console.ReadLine());
 
-            totalBalls = (int)totalOvers * 6;
-            ballsRemain = totalBalls;
-
+            Score.BallsRemain = (int)Score.TotalOvers * 6;
+            int commandStatus;
             //initialize the class
-            Command command = new Command();
+            ScoreCalculate command = new ScoreCalculate();
 
             Console.WriteLine("Enter the command 0-6 for run, 7 for wicket, 8 for wide, 9 for no ball");
            
-            while (ballsRemain> 0)
+            while (Score.BallsRemain > 0)
             {
                 commandStatus = Convert.ToInt32(Console.ReadLine());
                 switch (commandStatus)
@@ -58,14 +53,15 @@ namespace CricketScore
                         break;
                     // no ball
                     case 9:
+                        //not in here
                         Console.WriteLine("It's a no ball, Enter the no ball run and next ball is free hit");
-                        noBallRun = Convert.ToInt32(Console.ReadLine());
+                        int noBallRun = Convert.ToInt32(Console.ReadLine());
                         command.noBall(noBallRun);
                         break;
                     default:
                         break;
                 }
-                ballsRemain--;
+                Score.BallsRemain--;
             }
 
         }

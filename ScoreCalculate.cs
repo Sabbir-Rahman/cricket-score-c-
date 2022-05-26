@@ -6,70 +6,73 @@ using System.Threading.Tasks;
 
 namespace CricketScore
 {
-    public class Command
+    public class ScoreCalculate
     {   
         Situation situation = new Situation();
+        Commentery commentery = new Commentery();
         
         public void dotBall()
         {
             situation.increaseRun(0);
-            Console.WriteLine("Dot ball");
+            Console.WriteLine(commentery.loadCommentery("dot"));
         }
 
         public void single()
         {
             situation.increaseRun(1);
-            Console.WriteLine("Goes for a single");
+            Console.WriteLine(commentery.loadCommentery("single"));
         }
 
         public void twoRun()
         {
             situation.increaseRun(2);
-            Console.WriteLine("Nice running between the wicket it's a double");
+            Console.WriteLine(commentery.loadCommentery("double"));
         }
 
         public void threeRun()
         {
             situation.increaseRun(3);
-            Console.WriteLine("Sloppy fielding 3 run ");
+            Console.WriteLine(commentery.loadCommentery("triple"));
         }
 
         public void fourRun()
         {
             situation.increaseRun(4);
-            Console.WriteLine("Nice shot 4 run");
+            Console.WriteLine(commentery.loadCommentery("four"));
         }
 
         public void fiveRun()
         {
             situation.increaseRun(5);
-            Console.WriteLine("It's rare 5 run");
+            Console.WriteLine(commentery.loadCommentery("five"));
         }
 
         public void sixRun()
         {
             situation.increaseRun(6);
-            Console.WriteLine("Massive hit it's a six");
+            Console.WriteLine(commentery.loadCommentery("six"));
         }
 
         public void wicket()
         {
             situation.increaseWicket();
-            Console.WriteLine("Nice bowling it's a wicket");
+            Console.WriteLine(commentery.loadCommentery("wicket"));
         }
 
         public void wide()
         {
             situation.increaseRun(1, Situation.WideNo.wide);
-            Console.WriteLine("It's a wide");
+            Console.WriteLine(commentery.loadCommentery("wide"));
         }
 
         public void noBall(int noBallRun)
         {
             situation.increaseRun(noBallRun + 1, Situation.WideNo.no);
-            Console.WriteLine("Enter the free hit run");
+            Console.WriteLine(commentery.loadCommentery("no"));
             int freeHitRun = Convert.ToInt32(Console.ReadLine());
             situation.increaseRun(freeHitRun);
         }
     }
 }
+
+// commentry load 

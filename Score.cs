@@ -8,17 +8,18 @@ namespace CricketScore
 {
     class Score
     {
-        private int run =0, ball=0, wicket =0, ballPlayedInTheOver = 0;
-        private float oversPlayed = 0 ;
+        private static int run =0, ball=0, wicket =0, ballPlayedInTheOver = 0, totalOvers, ballsRemain;
+        private static float oversPlayed = 0 ;
 
         
-        public int Run { get { return run; } set { run = value; } }
+        public static int Run { get { return run; } set { run = value; } }
 
-        public int Ball { get { return ball; } set { ball = value; } }
-        public int Wicket { get { return wicket; } set { wicket = value; } }
-        public int BallPlayedInTheOver { get { return ballPlayedInTheOver;} set { ballPlayedInTheOver = value; } }
-        public float OversPlayed { get { return oversPlayed; } set { oversPlayed = value; } }
-
+        public static int Ball { get { return ball; } set { ball = value; } }
+        public static int Wicket { get { return wicket; } set { wicket = value; } }
+        public static int BallPlayedInTheOver { get { return ballPlayedInTheOver;} set { ballPlayedInTheOver = value; } }
+        public static float OversPlayed { get { return oversPlayed; } set { oversPlayed = value; } }
+        public static int TotalOvers { get { return totalOvers; } set { totalOvers = value;} }
+        public static int BallsRemain { get { return ballsRemain; } set { ballsRemain = value; } }
         public void scoreDisplay()
         {
             oversPlayed = ball/6;
@@ -30,3 +31,7 @@ namespace CricketScore
 
     }
 }
+
+
+// staic class modal
+// enum in different two class
