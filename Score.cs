@@ -20,14 +20,6 @@ namespace CricketScore
         public static float OversPlayed { get { return oversPlayed; } set { oversPlayed = value; } }
         public static int TotalOvers { get { return totalOvers; } set { totalOvers = value;} }
         public static int BallsRemain { get { return ballsRemain; } set { ballsRemain = value; } }
-        public void scoreDisplay()
-        {
-            oversPlayed = ball/6;
-            ballPlayedInTheOver = ball%6;
-
-            Console.WriteLine("Run : {0}, Wicket : {1}, Ball : {2}, Over - {3}", run, wicket, ballPlayedInTheOver, oversPlayed);
-            Console.WriteLine("Total Score : {0}/{1} {2}.{3} Overs", run, wicket, oversPlayed, ballPlayedInTheOver);
-        }
 
     }
 }

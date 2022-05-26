@@ -52,11 +52,8 @@ namespace CricketScore
                         command.wide();
                         break;
                     // no ball
-                    case 9:
-                        //not in here
-                        Console.WriteLine("It's a no ball, Enter the no ball run and next ball is free hit");
-                        int noBallRun = Convert.ToInt32(Console.ReadLine());
-                        command.noBall(noBallRun);
+                    case 9:          
+                        command.noBall();
                         break;
                     default:
                         break;

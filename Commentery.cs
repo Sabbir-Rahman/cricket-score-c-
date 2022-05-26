@@ -8,29 +8,29 @@ namespace CricketScore
 {
     class Commentery
     {
-        public string loadCommentery(string command)
+        public string loadCommentery(int command)
         {
             switch (command)
             {
-                case "dot":
+                case 0:
                     return "Dot ball";
-                case "single":
+                case 1:
                     return "Goes for a single";
-                case "double":
+                case 2:
                     return "Nice running between the wicket it's a double";
-                case "triple":
+                case 3:
                     return "Sloppy fielding 3 run";
-                case "four":
+                case 4:
                     return "Nice shot 4 run";
-                case "five":
+                case 5:
                     return "It's rare 5 run";
-                case "six":
+                case 6:
                     return "Massive hit it's a six";
-                case "wicket":
+                case 7:
                     return "Nice bowling it's a wicket";
-                case "wide":
+                case 8:
                     return "It's a wide";
-                case "no":
+                case 9:
                     return "Enter the free hit run";
                 default:
                     return "";
